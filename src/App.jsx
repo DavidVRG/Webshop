@@ -12,6 +12,7 @@ import { collection, query, getDocs, orderBy } from "firebase/firestore";
 import { db } from "./firebase/firebase"
 import DiscountedProducts from "./pages/DiscountedProducts"
 import Success from "./pages/Success"
+import Search from "./pages/Search"
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Route path="/discounted-products" element={<DiscountedProducts />} />
             <Route path="/checkout" element={<Checkout setCart={setCart} />} />
             <Route path="/success/:id" element={<Success setCart={setCart} />} />
+            <Route path="/search/:id" element={<Search />} />
           </Routes>
         </div>
         <Footer />

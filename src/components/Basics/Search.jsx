@@ -1,9 +1,13 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Search({ setShowSearch, showSearch }) {
 
     // Ref for outsideclick
     const ref = useRef()
+
+    // Navigate if user search product
+    const navigate = useNavigate()
 
     // If the user click outside then the currrent component set to hidden
     useEffect(() => {
@@ -23,8 +27,19 @@ export default function Search({ setShowSearch, showSearch }) {
         }
     }, [showSearch])
 
+    // Set search text
+    const [text, setText] = useState("")
+
+    // Search products
+    function searchProduct(e) {
+        if (e.key === "Enter") {
+            e.preventDefault()
+            navigate(`/search/${text}`, { state: { text: text } })
+        }
+    }
+
     return (
-        <div ref={ref} className='flex w-full md:w-1/3 h-full items-center'>
+        <form ref={ref} className='flex w-full md:w-1/3 h-full items-center'>
 
             <label
                 htmlFor="search"
@@ -38,6 +53,9 @@ export default function Search({ setShowSearch, showSearch }) {
                 className='bg-gray-100 placeholder-slate-500 w-full h-[70%] p-2 focus:outline-none'
                 type="text"
                 id='search'
+                value={text}
+                onKeyDown={(e) => searchProduct(e)}
+                onChange={(e) => setText(e.target.value)}
                 placeholder='Type and press enter' />
 
             <div className='bg-gray-100 h-[70%] rounded-tr-2xl rounded-br-2xl flex items-center'
@@ -47,6 +65,6 @@ export default function Search({ setShowSearch, showSearch }) {
                 </svg>
             </div>
 
-        </div>
+        </form>
     )
 }
