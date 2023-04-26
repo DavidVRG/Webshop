@@ -1,0 +1,30 @@
+[
+    {
+        "subtitle": "New Men's fashion",
+        "title": "Men's fashion",
+        "color": "#e5e7eb",
+        "image": "collection-men.png",
+        "url" : "/collection/men"
+    },
+    {
+        "subtitle": "New Women's fashion",
+        "title": "Women's fashion",
+        "color": "#fecaca",
+        "image": "collection-women.png",
+        "url" : "/collection/women"
+    },
+    {
+        "subtitle": "New Beauty products",
+        "title": "Beauty",
+        "color": "#bfdbfe",
+        "image": "collection-beauty.png",
+        "url" : "/collection/beauty"
+    },
+    {
+        "subtitle": "New Sport fashion",
+        "title": "Sport Fashion",
+        "color": "#fef08a",
+        "image": "collection-sport.png",
+        "url" : "/collection/sport"
+    }
+]

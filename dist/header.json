@@ -1,0 +1,26 @@
+[
+    {
+        "image": "./header-1.jpg",
+        "title": "Men's Fashion",
+        "url": "/collection/men",
+        "buttonTitle": "Explore now"
+    },
+    {
+        "image": "./header-2.jpg",
+        "title": "Women' Fashion",
+        "url": "/collection/women",
+        "buttonTitle": "Explore now"
+    },
+    {
+        "image": "./header-3.jpg",
+        "title": "Beauty",
+        "url": "/collection/beauty",
+        "buttonTitle": "Explore now"
+    },
+    {
+        "image": "./header-4.jpg",
+        "title": "Sport",
+        "url": "/collection/sport",
+        "buttonTitle": "Explore now"
+    }
+]
