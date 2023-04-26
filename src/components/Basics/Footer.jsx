@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -7,37 +8,49 @@ export default function Footer() {
 
                 <ul className='w-full md:w-max text-center'>
                     <li>
-                        <a className='hover:text-neutral-900' href="/">
+                        <Link
+                            to="/"
+                            className='hover:text-neutral-900'>
                             About Us
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a className='hover:text-neutral-900' href="/">
+                        <Link
+                            to="/"
+                            className='hover:text-neutral-900'>
                             Privacy Policy
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a className='hover:text-neutral-900' href="/">
+                        <Link
+                            to="/"
+                            className='hover:text-neutral-900'>
                             Contact Us
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
                 <ul className='w-full md:w-max text-center'>
                     <li>
-                        <a className='hover:text-neutral-900' href="/">
+                        <Link
+                            to="/"
+                            className='hover:text-neutral-900'>
                             Facebook
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a className='hover:text-neutral-900' href="/">
+                        <Link
+                            to="/"
+                            className='hover:text-neutral-900'>
                             Instagram
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a className='hover:text-neutral-900' href="/">
+                        <Link
+                            to="/"
+                            className='hover:text-neutral-900'>
                             Twitter
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
