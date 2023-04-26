@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input,
+textarea,
+button,
+select,
+article,
+li,
+svg,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.capitalize-first::first-letter {
+    text-transform: uppercase;
+}
