@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ProductsContext } from '../context/ProductsContext'
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from '../firebase/firebase'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -68,7 +68,9 @@ export default function Checkout({ setCart }) {
             city: city,
             street: street,
             cart: cart,
-            sumPrice: sumPrice
+            sumPrice: sumPrice,
+            timestamp: serverTimestamp(),
+            status: "pending"
         })
             .then((res) => {
                 navigate(`/success/${res.id}`, { state: {id: res.id }});
